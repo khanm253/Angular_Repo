@@ -1,3 +1,5 @@
+import {Box} from './Box'
+
 //Array declaration
 let a: number[];
 a = [1,2,3,4];
@@ -27,28 +29,39 @@ let drawPoint = (point : Point) => {
 
 
 // Classes and objects
+//Access modifiers
 
 class Pointer{
-    x: number;
-    y: number;
+
+    constructor(private _x?: number,private y?: number){
+
+    }
 
     draw(){
         // ...
-        console.log(this.x)
+        console.log(this._x)
     }
 
-    getDistance(another: Pointer){
-        console.log(this.x - another.x);
-    }
+    // getDistance(another: Pointer){
+    //     console.log(this._x - another._x);
+    // }
+
+    // public get x(){
+    //     return this._x;
+    // }
+
+    // public set x(value){
+    //     if(value < 0){
+    //         throw new Error('Not correct range');
+    //     }
+
+    //     this._x = value;
+    // }
 }
 
 
-let obj : Pointer = new Pointer;
-obj.x = 2;
-obj.y = 3;
+let obj : Pointer = new Pointer(1,2);
 obj.draw();
 
-let obj1 = new Pointer;
-obj1.x = 2;
-obj1.y = 3;
-obj1.draw();
+let box = new Box(1,3);
+
