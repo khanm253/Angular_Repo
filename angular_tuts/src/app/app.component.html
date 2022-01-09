@@ -1,2 +1,10 @@
 <h1>{{ title }}</h1>
+
+<div *ngIf="success; else elseBlock" style="background-color: aquamarine;">
+  user logged in
+</div>
+
+<ng-template #elseBlock>
+    user not logged in
+</ng-template>
 <router-outlet></router-outlet>
