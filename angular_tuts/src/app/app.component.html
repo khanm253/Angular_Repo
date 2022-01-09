@@ -10,8 +10,19 @@
 
 
 <ul>
-  <li *ngFor = "let contact of contacts">
-      {{ contact.name }}
+  <li *ngFor = "let contact of contacts; index as i">
+      {{ i }} {{ contact.name }}
   </li>
 </ul>
+
+<h4>Learning Switch Cases</h4>
+
+
+<div [ngSwitch] = "super">
+  <div *ngSwitchCase="'wonder'">
+    WonderWoman
+  </div>
+</div>
+
+
 <router-outlet></router-outlet>

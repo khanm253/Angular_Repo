@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular_tuts';
   success = true;
+  super = "wonder";
   contacts = [{
     name: 'Abd'
   }, {
