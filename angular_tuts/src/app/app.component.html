@@ -7,4 +7,11 @@
 <ng-template #elseBlock>
     user not logged in
 </ng-template>
+
+
+<ul>
+  <li *ngFor = "let contact of contacts">
+      {{ contact.name }}
+  </li>
+</ul>
 <router-outlet></router-outlet>
