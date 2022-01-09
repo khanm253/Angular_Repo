@@ -1,6 +1,17 @@
 <h1>{{ title }}</h1>
 
-<div *ngIf="success; else elseBlock" style="background-color: aquamarine;">
+<table>
+  <tr>
+    <th>Contact Name</th>
+    <th>Contact Id</th>
+  </tr>
+  <tr *ngFor = "let contact of contacts">
+    <td>{{ contact.name }}</td>
+    <td>{{ contact.id }}</td>
+  </tr>
+</table>
+
+<!-- <div *ngIf="success; else elseBlock" style="background-color: aquamarine;">
   user logged in
 </div>
 
@@ -27,6 +38,6 @@
 
 <h4>Learning Ng Style</h4>
 
-<div [ngStyle] = "{'color': 'blue'}"> Hey</div>
+<div [ngStyle] = "{'color': 'blue'}"> Hey</div> -->
 
 <router-outlet></router-outlet>

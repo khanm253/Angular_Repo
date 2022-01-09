@@ -10,10 +10,17 @@ export class AppComponent {
   success = true;
   super = "wonder";
   contacts = [{
-    name: 'Abd'
+    name: 'Abd',
+    id: 1
   }, {
-    name: 'Asif'
+    name: 'Asif',
+    id: 2
   }, {
-    name: 'Ikram'
+    name: 'Ikram',
+    id: 3
   }]
+
+  
+
+
 }
