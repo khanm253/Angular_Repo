@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'angular_tuts';
   success = true;
   super = "wonder";
+  percent = 0.69
   contacts = [{
     name: 'Abd',
     id: 1
