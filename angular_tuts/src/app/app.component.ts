@@ -20,7 +20,9 @@ export class AppComponent {
     id: 3
   }]
 
-  
+  sayHello():void{
+    console.log('Hello')
+  }
 
 
 }

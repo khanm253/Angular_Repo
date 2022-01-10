@@ -6,11 +6,14 @@
     <th>Contact Id</th>
   </tr>
   <tr *ngFor = "let contact of contacts">
-    <td>{{ contact.name }}</td>
-    <td>{{ contact.id }}</td>
+    <td [title] = "contact.name" >{{ contact.name }}</td>
+    <td [title] = "contact.id" >{{ contact.id }}</td>
   </tr>
 </table>
 
+<button (click)="sayHello()">
+  Hello
+</button>
 <!-- <div *ngIf="success; else elseBlock" style="background-color: aquamarine;">
   user logged in
 </div>
