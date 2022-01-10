@@ -10,6 +10,7 @@ export class AppComponent {
   success = true;
   super = "wonder";
   percent = 0.69
+  date = Date.now()
   contacts = [{
     name: 'Abd',
     id: 1
