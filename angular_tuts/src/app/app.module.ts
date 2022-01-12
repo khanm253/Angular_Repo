@@ -19,6 +19,7 @@ import { SearchComponent } from './search/search.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminEditComponent } from './admin-edit/admin-edit.component';
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AdminEditComponent } from './admin-edit/admin-edit.component';
     SearchComponent,
     PagenotfoundComponent,
     AdminComponent,
-    AdminEditComponent
+    AdminEditComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,

@@ -10,11 +10,13 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminChildAccessGuard } from './admin-child-access.guard';
 import { AdminEditComponent } from './admin-edit/admin-edit.component';
 import { ACGuard } from './ac.guard';
+import { UnsavedGuard } from './unsaved.guard';
+import { CustomerComponent } from './customer/customer.component';
 
 const routes: Routes = [
   {path:'product/:id', component: ProductComponent, canActivate: [AuthGuard]},
   {path:'client', component: ClientComponent},
-  {path:'search', component: SearchComponent},
+  {path:'search', component: SearchComponent, canDeactivate: [UnsavedGuard]},
   { path: 'payments', loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule) },
   {path: 'admin',
     canActivate: [SuperAdminGuard],
@@ -32,6 +34,7 @@ const routes: Routes = [
       }
     ]
   },
+  {path: 'customer', component: CustomerComponent},
   {path:'**', component: PagenotfoundComponent},
 
 ];

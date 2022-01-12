@@ -6,7 +6,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-
+  isDirty = true;
+  
   constructor(private activatedRoute: ActivatedRoute) { 
     this.activatedRoute.queryParams.subscribe((params) => {
       console.log(params)
