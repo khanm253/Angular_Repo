@@ -1,18 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoanTypesComponent } from './loan-types/loan-types.component';
-import { LoansComponent } from './loans/loans.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
-  {
-    path: 'loans',
-    component: LoansComponent,
-  },
-  {
-    path: 'loantype',
-    component: LoanTypesComponent,
-    outlet: 'router1'
-  }
+  {path:'product/:id', component: ProductComponent},
 ];
 
 @NgModule({

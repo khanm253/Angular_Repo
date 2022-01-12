@@ -10,7 +10,10 @@ import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
 import { LoansComponent } from './loans/loans.component';
 import { LoanTypesComponent } from './loan-types/loan-types.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { P1Component } from './p1/p1.component';
+import { P2Component } from './p2/p2.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HighlightDirective,
     UsersComponent,
     LoansComponent,
-    LoanTypesComponent
+    LoanTypesComponent,
+    P1Component,
+    P2Component,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy
+      useClass: PathLocationStrategy
     }
   ],
   bootstrap: [AppComponent]
