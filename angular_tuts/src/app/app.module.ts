@@ -15,6 +15,7 @@ import { P1Component } from './p1/p1.component';
 import { P2Component } from './p2/p2.component';
 import { ProductComponent } from './product/product.component';
 import { ClientComponent } from './client/client.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ClientComponent } from './client/client.component';
     P1Component,
     P2Component,
     ProductComponent,
-    ClientComponent
+    ClientComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
