@@ -9,8 +9,9 @@ const routes: Routes = [
     component: LoansComponent,
   },
   {
-    path: 'loan-type',
+    path: 'loantype',
     component: LoanTypesComponent,
+    outlet: 'router1'
   }
 ];
 
