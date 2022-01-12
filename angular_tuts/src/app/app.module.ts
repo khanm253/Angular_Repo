@@ -17,6 +17,8 @@ import { ProductComponent } from './product/product.component';
 import { ClientComponent } from './client/client.component';
 import { SearchComponent } from './search/search.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminEditComponent } from './admin-edit/admin-edit.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ProductComponent,
     ClientComponent,
     SearchComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    AdminComponent,
+    AdminEditComponent
   ],
   imports: [
     BrowserModule,
