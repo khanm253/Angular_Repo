@@ -10,6 +10,7 @@ import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
 import { LoansComponent } from './loans/loans.component';
 import { LoanTypesComponent } from './loan-types/loan-types.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,12 @@ import { LoanTypesComponent } from './loan-types/loan-types.component';
     MatButtonModule,
     FormsModule 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
