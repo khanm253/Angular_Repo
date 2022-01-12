@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-edit',
@@ -10,13 +10,18 @@ export class AdminEditComponent implements OnInit {
 
   addType:any = null;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.addType = new FormGroup({
-      'name': new FormControl,
-      'desc': new FormControl,
-    });
+    // this.addType = new FormGroup({
+    //   'name': new FormControl,
+    //   'desc': new FormControl,
+    // });
+
+    this.addType = this.formBuilder.group({
+        'name': new FormControl('Edit this'),
+        'desc': new FormControl('Change this'),
+    })
   }
 
   addTypeMethod(){
