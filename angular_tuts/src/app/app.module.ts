@@ -14,6 +14,7 @@ import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@a
 import { P1Component } from './p1/p1.component';
 import { P2Component } from './p2/p2.component';
 import { ProductComponent } from './product/product.component';
+import { ClientComponent } from './client/client.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductComponent } from './product/product.component';
     LoanTypesComponent,
     P1Component,
     P2Component,
-    ProductComponent
+    ProductComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,
