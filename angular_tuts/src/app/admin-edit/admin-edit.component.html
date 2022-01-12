@@ -1,1 +1,7 @@
 <p>admin-edit works!</p>
+
+<form [formGroup]="addType">
+    <input type="text" formControlName="name">
+    <textarea formControlName="desc" placeholder="Type here"></textarea>
+    <button (click)="addTypeMethod()">Add</button>
+</form>

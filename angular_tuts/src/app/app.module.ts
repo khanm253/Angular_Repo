@@ -20,6 +20,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminEditComponent } from './admin-edit/admin-edit.component';
 import { CustomerComponent } from './customer/customer.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CustomerComponent } from './customer/customer.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    FormsModule 
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     {
