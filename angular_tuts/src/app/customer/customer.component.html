@@ -2,9 +2,9 @@
 <form #addForm = "ngForm" (submit)="addCustomer(addForm)">
     <input type="text" [(ngModel)]= "firstname" name="firstname">
     <br/>
-    <input type="checkbox" name="terms" [(ngModel)]="terms"/>
+    <input type="checkbox" name="terms" [(ngModel)]="terms" required/>
     <br/>
-    <button type="submit" >Add Customer</button>
+    <button type="submit" [disabled]="!addForm.valid">Add Customer</button>
 </form>
 
 <p>{{ firstname }}</p>
