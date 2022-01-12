@@ -16,5 +16,10 @@ export class CustomerComponent implements OnInit {
 
   addCustomer(form: NgForm){
     console.log(form.value);
+    //form.reset();
+  }
+
+  resetForm(form: NgForm){
+    form.reset();
   }
 }

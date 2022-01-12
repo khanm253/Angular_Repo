@@ -5,6 +5,7 @@
     <input type="checkbox" name="terms" [(ngModel)]="terms" required/>
     <br/>
     <button type="submit" [disabled]="!addForm.valid">Add Customer</button>
+    <button (click)="resetForm(addForm)">Reset</button>
 </form>
 
 <p>{{ firstname }}</p>
