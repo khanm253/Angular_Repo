@@ -8,12 +8,16 @@ import {MatButtonModule} from '@angular/material/button';
 import { HighlightDirective } from './highlight.directive';
 import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
+import { LoansComponent } from './loans/loans.component';
+import { LoanTypesComponent } from './loan-types/loan-types.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective,
-    UsersComponent
+    UsersComponent,
+    LoansComponent,
+    LoanTypesComponent
   ],
   imports: [
     BrowserModule,
