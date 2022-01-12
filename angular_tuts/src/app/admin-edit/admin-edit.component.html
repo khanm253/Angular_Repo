@@ -3,5 +3,5 @@
 <form [formGroup]="addType">
     <input type="text" formControlName="name">
     <textarea formControlName="desc" placeholder="Type here"></textarea>
-    <button (click)="addTypeMethod()">Add</button>
+    <button (click)="addTypeMethod()" [disabled]="!addType.valid">Add</button>
 </form>

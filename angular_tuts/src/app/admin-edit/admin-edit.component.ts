@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-edit',
@@ -19,7 +19,10 @@ export class AdminEditComponent implements OnInit {
     // });
 
     this.addType = this.formBuilder.group({
-        'name': new FormControl('Edit this'),
+        'name': new FormControl('Edit this', [
+          Validators.required,
+          Validators.minLength(10),
+        ]),
         'desc': new FormControl('Change this'),
     })
   }
