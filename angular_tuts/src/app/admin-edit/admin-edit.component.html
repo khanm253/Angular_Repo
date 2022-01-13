@@ -1,9 +1,27 @@
 <p>admin-edit works!</p>
 
 <form [formGroup]="addType">
-    <input type="text" formControlName="name" (keyup)="trackChanges()">
-    <br/>
-    <textarea formControlName="desc" placeholder="Type here"></textarea>
+    <table>
+        <tr>
+            <td>
+                <input type="text" formControlName="name" (keyup)="trackChanges()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea formControlName="desc" placeholder="Type here"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <label>Users</label>
+            <div class="form-group" formArrayName="users">
+                <!-- <div *ngFor="let group of addType.controls">
+                    <input type="text" [formControl]="group">
+                </div> -->
+            </div>
+        </tr>
+    </table>
     <button (click)="addTypeMethod()" [disabled]="!addType.valid">Add</button>
     <button (click)="resetForm()">Reset</button>
+    
 </form>

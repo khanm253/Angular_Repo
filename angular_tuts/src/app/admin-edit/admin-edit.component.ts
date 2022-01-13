@@ -1,5 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-edit',
@@ -23,12 +23,25 @@ export class AdminEditComponent implements OnInit{
     //   'desc': new FormControl,
     // });
 
+    let users = new FormArray([
+      new FormControl('ARC'),
+      new FormControl('Tutorials'),
+    ]);
+
+    console.log(users.controls.forEach(i =>{
+      console.log(i.value)
+    }));
+
     this.addType = this.formBuilder.group({
         'name': new FormControl(null, [
           Validators.required,
           Validators.minLength(10),
         ]),
-        'desc': new FormControl(null),
+        'desc': new FormControl,
+        'users': new FormArray([
+          new FormControl('ARC'),
+          new FormControl('Tutorials'),
+        ])
     })
   }
 
@@ -37,6 +50,15 @@ export class AdminEditComponent implements OnInit{
   }
 
   resetForm(){
+
+    // try{
+    //   if(this.addType.value){
+    //     throw new Error('Hello')
+    //   }
+    // }catch(e){
+    //   console.log(e)
+    // }
+
     this.addType.reset();
   }
 }
