@@ -1,7 +1,9 @@
 <p>admin-edit works!</p>
 
 <form [formGroup]="addType">
-    <input type="text" formControlName="name">
+    <input type="text" formControlName="name" (keyup)="trackChanges()">
+    <br/>
     <textarea formControlName="desc" placeholder="Type here"></textarea>
     <button (click)="addTypeMethod()" [disabled]="!addType.valid">Add</button>
+    <button (click)="resetForm()">Reset</button>
 </form>

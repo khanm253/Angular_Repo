@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,11 +6,16 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   templateUrl: './admin-edit.component.html',
   styleUrls: ['./admin-edit.component.scss']
 })
-export class AdminEditComponent implements OnInit {
+export class AdminEditComponent implements OnInit{
 
-  addType:any = null;
+  addType: FormGroup = new FormGroup({});
 
   constructor(private formBuilder: FormBuilder) { }
+  trackChanges(): void {
+    this.addType.statusChanges.subscribe(data => {
+      console.log(data)
+    });
+  }
 
   ngOnInit(): void {
     // this.addType = new FormGroup({
@@ -19,15 +24,19 @@ export class AdminEditComponent implements OnInit {
     // });
 
     this.addType = this.formBuilder.group({
-        'name': new FormControl('Edit this', [
+        'name': new FormControl(null, [
           Validators.required,
           Validators.minLength(10),
         ]),
-        'desc': new FormControl('Change this'),
+        'desc': new FormControl(null),
     })
   }
 
   addTypeMethod(){
     console.log(this.addType.value)
+  }
+
+  resetForm(){
+    this.addType.reset();
   }
 }
