@@ -1,0 +1,10 @@
+<p>list-users works!</p>
+
+<app-filter-users [data]="cName" (updatedList)="update($event)"></app-filter-users>
+
+<div>Data from Service</div>
+
+<ul *ngFor="let user of users">
+   <li> {{ user.name }}</li> 
+</ul>
+

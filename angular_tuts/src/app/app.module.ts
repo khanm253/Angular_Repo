@@ -21,6 +21,8 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminEditComponent } from './admin-edit/admin-edit.component';
 import { CustomerComponent } from './customer/customer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PagenotfoundComponent,
     AdminComponent,
     AdminEditComponent,
-    CustomerComponent
+    CustomerComponent,
+    DeleteCustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     {

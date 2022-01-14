@@ -12,6 +12,7 @@ import { AdminEditComponent } from './admin-edit/admin-edit.component';
 import { ACGuard } from './ac.guard';
 import { UnsavedGuard } from './unsaved.guard';
 import { CustomerComponent } from './customer/customer.component';
+import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
 
 const routes: Routes = [
   {path:'product/:id', component: ProductComponent, canActivate: [AuthGuard]},
@@ -35,6 +36,7 @@ const routes: Routes = [
     ]
   },
   {path: 'customer', component: CustomerComponent},
+  {path: 'delete', component: DeleteCustomerComponent},
   {path:'**', component: PagenotfoundComponent},
 
 ];
