@@ -25,6 +25,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
 import { CommonInterceptor } from './common.interceptor';
 import { ObsvComponent } from './obsv/obsv.component';
+import { LatestComponent } from './latest/latest.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ObsvComponent } from './obsv/obsv.component';
     AdminEditComponent,
     CustomerComponent,
     DeleteCustomerComponent,
-    ObsvComponent
+    ObsvComponent,
+    LatestComponent
   ],
   imports: [
     BrowserModule,
