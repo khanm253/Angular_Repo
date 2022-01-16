@@ -13,6 +13,7 @@ import { ACGuard } from './ac.guard';
 import { UnsavedGuard } from './unsaved.guard';
 import { CustomerComponent } from './customer/customer.component';
 import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
+import { ObsvComponent } from './obsv/obsv.component';
 
 const routes: Routes = [
   {path:'product/:id', component: ProductComponent, canActivate: [AuthGuard]},
@@ -37,6 +38,7 @@ const routes: Routes = [
   },
   {path: 'customer', component: CustomerComponent},
   {path: 'delete', component: DeleteCustomerComponent},
+  {path: 'obsv', component: ObsvComponent},
   {path:'**', component: PagenotfoundComponent},
 
 ];

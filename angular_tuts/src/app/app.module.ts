@@ -21,8 +21,10 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminEditComponent } from './admin-edit/admin-edit.component';
 import { CustomerComponent } from './customer/customer.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
+import { CommonInterceptor } from './common.interceptor';
+import { ObsvComponent } from './obsv/obsv.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { DeleteCustomerComponent } from './delete-customer/delete-customer.compo
     AdminComponent,
     AdminEditComponent,
     CustomerComponent,
-    DeleteCustomerComponent
+    DeleteCustomerComponent,
+    ObsvComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +58,11 @@ import { DeleteCustomerComponent } from './delete-customer/delete-customer.compo
     {
       provide: LocationStrategy,
       useClass: PathLocationStrategy
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CommonInterceptor,
+      multi: true
     }
   ],
   bootstrap: [AppComponent]
