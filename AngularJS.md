@@ -28,3 +28,10 @@
 
     </body>
 
+### Modules
+
+    var myApp = angular.module('myApp', [])
+
+    set ng-app = "myApp"
+
+    myApp.config, myApp.run, myApp.controller //All helper functions
