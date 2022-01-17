@@ -16,3 +16,15 @@
 
     </body>
 
+### Directives : ng-repeat
+
+    <body ng-oninit="numbers=[1,3,4]"> // Same as *ngFor
+
+        <ul ng-repeat="number in numbers">
+            <li>
+                {{ number }}
+            </li>
+        </ul>
+
+    </body>
+
