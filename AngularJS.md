@@ -35,3 +35,13 @@
     set ng-app = "myApp"
 
     myApp.config, myApp.run, myApp.controller //All helper functions
+
+### Controller
+
+    myApp.controller('AppController', function($scope){
+        $scope.message = "Message"
+    });
+
+    <div ng-controller="AppController">
+        <p>{{ messsage }}<p>
+    </div>
