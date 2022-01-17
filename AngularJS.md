@@ -45,3 +45,20 @@
     <div ng-controller="AppController">
         <p>{{ messsage }}<p>
     </div>
+
+### Filters //Like pipes
+
+    <input ng-model="search">   
+    <ul ng-repeat="ninja in ninjas| orderBy: 'name'| filter: search">
+        <li>
+            {{ ninja.name }} - {{ ninja.rate | currency : '$' }}
+        </li>
+    </ul>
+
+### Ng-include
+
+    <ng-include src="smth.html"><ng-include>
+
+    or 
+
+    <header ng-include="smth.html"><header>
