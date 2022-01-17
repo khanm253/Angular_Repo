@@ -45,3 +45,7 @@
     <div ng-controller="AppController">
         <p>{{ messsage }}<p>
     </div>
+    
+### Directives: ng-show/ ng-hide (Basically ngIf)
+
+    ng-show="true" //loads element into DOM
