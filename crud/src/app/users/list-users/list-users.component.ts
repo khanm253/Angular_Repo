@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list-users',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListUsersComponent implements OnInit {
 
-  constructor() { }
+  users: any;
+  constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.userService.listUsers().subscribe(data => {
+      console.log(data)
+      this.users = data;
+    })
   }
+
+  goToUser(){
+    
+  }
+
 
 }
