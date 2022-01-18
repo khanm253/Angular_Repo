@@ -1,6 +1,6 @@
 <p>List of users:</p>
 
-<mat-list role="list">
+<mat-list role="list" *ngIf="users">
     <mat-list-item role="listitem" *ngFor="let user of users" >
         <span class="user-name" [routerLink]="['/users/view', user.id]">
             {{ user.name }}
