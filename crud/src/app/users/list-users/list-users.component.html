@@ -1,13 +1,14 @@
 <p>List of users:</p>
 
 <mat-list role="list" *ngIf="users">
-    <mat-list-item role="listitem" *ngFor="let user of users" >
-        <span class="user-name" [routerLink]="['/users/view', user.id]">
+    <mat-card class="each-user" role="listitem" *ngFor="let user of users" >
+        <mat-card-title class="user-name" [routerLink]="['/users/view', user.id]">
             {{ user.name }}
-        </span>
-        |
-        <a class="route-link" [routerLink]="['/users/edit', user.id]">Edit</a>
-        |
-        <a class="route-link" [routerLink]="['/users/delete', user.id]">Delete</a>
-    </mat-list-item>
+        </mat-card-title>
+        <mat-card-content>
+            <a class="route-link" [routerLink]="['/users/edit', user.id]">Edit</a>
+            |
+            <a class="route-link" [routerLink]="['/users/delete', user.id]">Delete</a>
+        </mat-card-content>
+    </mat-card>
   </mat-list>

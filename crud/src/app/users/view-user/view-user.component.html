@@ -1,5 +1,9 @@
-<div *ngIf="uDetails">
-    <h2>
+<mat-card class="user-details" *ngIf="uDetails">
+    <mat-card-title>
         {{ uDetails.name }}
-    </h2>
-</div>
+    </mat-card-title>
+    <mat-card-content>
+        {{ uDetails.email }}
+    </mat-card-content>
+
+</mat-card>
