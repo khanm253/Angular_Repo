@@ -8,7 +8,11 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,13 @@ import {MatCardModule} from '@angular/material/card';
     CommonModule,
     MatListModule,
     RouterModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule
   ],
   exports: [
     ListUsersComponent,
