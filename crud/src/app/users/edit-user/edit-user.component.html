@@ -1,1 +1,28 @@
-<p>edit-user works!</p>
+<div class="parent-center" *ngIf="uDetails">
+    <mat-card class="card">
+        <form [formGroup]="formGroup" (submit)="editUser()">
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            <p>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Phone</mat-label>
+                    <input matInput formControlName="phone">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            </p>
+            <div class="button">
+                <button mat-raised-button type="submit">Edit User</button>
+            </div>
+        </form>
+    </mat-card>
+</div>
