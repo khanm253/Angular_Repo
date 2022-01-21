@@ -1,5 +1,8 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-delete-user',
@@ -10,13 +13,22 @@ export class DeleteUserComponent implements OnInit {
 
   uid: string = "";
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, 
+    private userService: UserService, 
+    private _snackBar: MatSnackBar, 
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(data => {
       this.uid = data['id'];
     })
-    console.log('Uid', this.uid)
+    
+    this.userService.deleteUser(this.uid).subscribe(data => {
+      this._snackBar.open('User deleted successfully');
+      //this.router.navigate(['...','list'])
+    }, error => console.log(error))
+    
   }
 
 }

@@ -15,14 +15,14 @@ export class UserService {
   }
 
   viewUser(id: string){
-    return this.http.get(this.baseUrl+'users/'+id);
+    return this.http.get(this.baseUrl+ 'users/' +id);
   }
 
   addUser(body: object){
     return this.http.post(this.baseUrl+'users', body);
   }
 
-  deleteUser(body: object){
-    return this.http.delete(this.baseUrl+'users')
+  deleteUser(id: string){
+    return this.http.delete(this.baseUrl+ 'users/'+ id)
   }
 }
