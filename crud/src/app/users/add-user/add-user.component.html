@@ -1,6 +1,6 @@
 <div class="parent-center">
     <mat-card class="card">
-        <form [formGroup]="addUser" (submit)="createUser()">
+        <form [formGroup]="addUser" (submit)="createUser()" name="addUser">
                 <mat-form-field appearance="outline">
                     <mat-label>Name</mat-label>
                     <input matInput formControlName="name">
@@ -18,10 +18,16 @@
                     <mat-label>Phone</mat-label>
                     <input matInput formControlName="phone">
                     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error *ngIf="addUser.controls['phone'].errors && addUser.controls['phone'].hasError('required') ">
+                        Phone is required
+                    </mat-error>
+                    <mat-error *ngIf="addUser.controls['phone'].errors && addUser.controls['phone'].hasError('maxlength') ">
+                        Max phone no. length is 10
+                    </mat-error>
                 </mat-form-field>
             </p>
             <div class="button">
-                <button mat-raised-button type="submit">Submit</button>
+                <button mat-raised-button type="submit" [disabled]="!addUser.valid">Submit</button>
             </div>
         </form>
     </mat-card>
