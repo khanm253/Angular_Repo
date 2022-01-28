@@ -11,6 +11,12 @@
                     <mat-label>Email</mat-label>
                     <input matInput formControlName="email">
                     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-error *ngIf="addUser.controls['phone'].errors && addUser.controls['phone'].hasError('email') ">
+                        Must be a valid email.
+                    </mat-error>
+                    <mat-error *ngIf="addUser.controls['phone'].errors && addUser.controls['phone'].hasError('required') ">
+                        Email is required.
+                    </mat-error>
                 </mat-form-field>
             </p>
             <p>
